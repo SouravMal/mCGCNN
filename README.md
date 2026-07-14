@@ -4,5 +4,5 @@ mCGCNN is a dual-stream crystal graph convolutional neural network for the effic
 
 
 ## Dual graph representation in the mCGCNN architecture
-<img src="images/Magnetic_graph.pdf" alt="Dual graph schematic" width="550">
+<img src="images/mcgcnn-arch.png" alt="Dual graph schematic" width="550">
 
