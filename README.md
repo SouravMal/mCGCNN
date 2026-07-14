@@ -11,3 +11,27 @@ mCGCNN is a dual-stream crystal graph convolutional neural network for the effic
 ## Architecture of mCGCNN
 <img src="images/mcgcnn-arch.png" alt="mcgcnn architecture schematic" width="800">
 
+## License
+
+This project is licensed under the **MIT License**.
+
+See the [LICENSE](LICENSE) file for details.
+
+
+## Citation
+
+Please consider citing our work if you find it helpful:
+
+```bibtex
+@misc{mal2026mcgcnndualstreamcrystalgraph,
+      title={mCGCNN: A Dual-Stream Crystal Graph Convolutional Neural Network for the Efficient Prediction of Magnetic Properties of Crystalline Materials}, 
+      author={Sourav Mal and Satadeep Bhattacharjee},
+      year={2026},
+      eprint={2606.28458},
+      archivePrefix={arXiv},
+      primaryClass={cond-mat.mtrl-sci},
+      url={https://arxiv.org/abs/2606.28458}, 
+}
+```
+
+
