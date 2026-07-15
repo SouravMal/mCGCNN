@@ -17,6 +17,24 @@ Its main features include:
 ## Architecture of mCGCNN
 <img src="images/mcgcnn-arch.png" alt="mcgcnn architecture schematic" width="800">
 
+## Installation
+
+### Prerequisites
+
+The package requires specific environments and dependencies.
+Using a virtual environment is highly recommended.
+**Environment Setup using Conda**
+
+```
+conda create -n mcgcnn python=3.11
+conda activate mcgcnn
+```
+### Install from Source Code
+```
+git clone https://github.com/SouravMal/mCGCNN.git
+cd mCGCNN
+pip install -e .
+```
 
 ## Generate Dual Graph Representations
 
