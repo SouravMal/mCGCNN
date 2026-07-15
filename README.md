@@ -18,7 +18,7 @@ Its main features include:
 <img src="images/mcgcnn-arch.png" alt="mcgcnn architecture schematic" width="800">
 
 
-## Generate the Dual Graphs (Crystal Graph + Magnetic Subgraph)
+## Generate Dual Graph Representations
 
 Before training or inference, the crystal structures must be converted into dual graph representations consisting of **crystal graph** and its corresponding **magnetic subgraph**.
 
@@ -27,7 +27,7 @@ Before training or inference, the crystal structures must be converted into dual
 Organize your dataset as follows:
 
 ```text
-my_dataset/
+sample_dataset/
 ├── dataset.csv
 ├── atom_init.json
 ├── magnetic_atom_init.json
@@ -58,17 +58,18 @@ where **tot_mom_mub** denotes the DFT total magnetic moment per unit cell in $\m
 
 Run
 ```bash
-python preprocess.py my_dataset --target tot_mom_mub 
+python preprocess.py sample_dataset --target tot_mom_mub 
 ```
 By default, the generated graph files are written to
 ```text
-my_dataset/
+sample_dataset/
 ├── processed_graphs/
 │   ├── mp-100.pt
 │   ├── mp-101.pt
 │   ├── mp-102.pt
 │   └── ...
 ```
+Each .pt file stores the crystal graph, magnetic subgraph, magnetic-to-structural index mapping, target property, and material ID.
 
 ### Using Multiple CPU Cores
 
