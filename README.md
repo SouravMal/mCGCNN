@@ -11,6 +11,32 @@ mCGCNN is a dual-stream crystal graph convolutional neural network for the effic
 <img src="images/mcgcnn-arch.png" alt="mcgcnn architecture schematic" width="800">
 
 
+## Generate the Dual Graphs (Crystal Graph + Magnetic Subgraph)
+
+Before training or inference, the crystal structures must be converted into dual graph representations consisting of **crystal graph** and its corresponding **magnetic subgraph**.
+
+### Dataset Organization
+
+Organize your dataset as follows:
+
+```text
+my_dataset/
+├── dataset.csv
+├── atom_init.json
+├── magnetic_atom_init.json
+├── material_1.cif
+├── material_2.cif
+├── material_3.cif
+└── ...
+```
+where
+* `dataset.csv` contains the material IDs and target properties.
+* `atom_init.json` contains the elemental feature vectors as used in CGCNN.
+* `magnetic_atom_init.json` contains the magnetic elemental feature vectors.
+* `*.cif` files contain the crystal structures.  
+
+
+
 ## How to genearte the dual graph (crystal graph + corresponding magnetic subgraph)?
 
 We have to run the following command:
