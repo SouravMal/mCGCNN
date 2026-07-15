@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dynamically generated training and inference directories
+outputs/
+inference_results/
+training_runs/
+
+# Preprocessed graph data
+*/processed_graphs/
