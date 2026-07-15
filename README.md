@@ -103,6 +103,32 @@ You can easily customize hyperparameters, paths, and random seeds directly from 
 python train.py --data_dir sample_dataset/processed_graphs --out_dir training_runs/run_01 --epochs 150 --batch_size 128 --lr 1e-4 --lr_milestones 80 120 --seed 42
 ```
 
+## Evaluate the Trained Model
+After training the model, you can evaluate its performance and generate predictions using `predict.py`. This script automatically loads the saved model weights, normalizer states, and the exact data splits to ensure a strict, leakage-free evaluation on the holdout test set.
+
+### Basic Inference Run
+If you trained the model using the default output directories, simply point the script to your processed graphs:
+```bash
+python predict.py --data_dir sample_dataset/processed_graphs
+```
+By default, the script will look for `best_mcgcnn.pt` and `dataset_splits.pt` in the `./outputs` folder. It will generate a new `./outputs/predictions/` directory containing:
+
+* `train_predictions.csv`, `val_predictions.csv` and `test_predictions.csv`: Predictions for the training set, validation set and the holdout test set.
+* `prediction.log`: A persistent log of the evaluation run.
+
+
+### Advanced Inference Run
+If you used custom output directories during training, you must explicitly provide the paths to your saved model and dataset splits: 
+```bash
+python predict.py --data_dir sample_dataset/processed_graphs --model_path training_runs/run_01/best_mcgcnn.pt --split_path training_runs/run_01/dataset_splits.pt --out_dir training_runs/run_01/predictions
+```
+
+
+## Predicting with the Pretrained mCGCNN model
+
+
+
+
 
 
 ## License
