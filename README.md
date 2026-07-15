@@ -133,13 +133,13 @@ Place your `.cif` files, alongside a dummy `dataset.csv` (the target column can 
 
 Run the preprocessing script to generate the dual graph representations:
 ```bash
-python preprocess.py my_unknown_dataset --target tot_mom_mub
+python preprocess.py my_dataset --target tot_mom_mub
 ```
 
 #### Run Inference
 Use the `inference.py` script to load the pretrained model and generate predictions for your entire folder of materials:
 ```bash
-python inference.py --data_dir my_unknown_dataset/processed_graphs --model_path pretrained_models/mcgcnn_pretrained_mp.pt
+python inference.py --data_dir my_dataset/processed_graphs --model_path pretrained_models/mcgcnn_pretrained_mp.pt
 ```
 The script will generate a new directory named `./inference_results/` containing `pretrained_predictions.csv` with your final predicted magnetic moments.
 
