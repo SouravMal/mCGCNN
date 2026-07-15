@@ -37,6 +37,14 @@ cd mCGCNN
 pip install -e .
 ```
 
+### Verify Installation
+
+After installation, you can test if all the prerequisites are installed properly by running:
+```bash
+python train.py --help
+python predict.py --help
+```
+
 ## Generate Dual Graph Representations
 
 Before training or inference, the crystal structures must be converted into dual graph representations consisting of **crystal graph** and its corresponding **magnetic subgraph**.
