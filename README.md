@@ -79,6 +79,29 @@ By default, `preprocess.py` uses all available CPU cores. To specify the number 
 python preprocess.py sample_dataset --target tot_mom_mub --workers 8
 ```
 
+## Train the Model
+
+Once the dual graphs are generated, you can train the mCGCNN model using `train.py`. The script handles dataset splitting, data normalization for regression, model initialization, and training.
+
+**Basic Training Run:**
+To run the model with default hyperparameters, simply provide the path to the directory containing your generated `.pt` files:
+
+```bash
+python train.py --data_dir sample_dataset/processed_graphs
+```
+By default, the script creates an `outputs/` directory in the root folder containing:
+
+* `training.log`: A text log of training metrics and environment setup.
+* `dataset_splits.pt`: The exact train/val/test indices used, to ensure exact reconstruction of the test set later.
+* `best_mcgcnn.pt`: The saved model weights and normalizer states from the epoch with the lowest validation loss.
+
+**Advanced Training Run:**
+You can easily customize hyperparameters, paths, and random seeds directly from the command line. To keep the folder organized, you can also specify a custom output directory for specific runs:
+```bash
+python train.py --data_dir sample_dataset/processed_graphs --out_dir training_runs/run_01 --epochs 150 --batch_size 128 --lr 1e-4 --lr_milestones 80 120 --seed 42
+```
+
+
 
 ## License
 
