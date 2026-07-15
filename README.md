@@ -70,9 +70,9 @@ my_dataset/
 │   └── ...
 ```
 
-## How to genearte the dual graph (crystal graph + corresponding magnetic subgraph)?
+### Using Multiple CPU Cores
 
-We have to run the following command:
+By default, `preprocess.py` uses all available CPU cores. To specify the number of worker processes manually, run the follwing.
 
 ```bash
 python preprocess.py data/sample --target tot_mom_mub --workers 8
