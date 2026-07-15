@@ -11,6 +11,17 @@ mCGCNN is a dual-stream crystal graph convolutional neural network for the effic
 ## Architecture of mCGCNN
 <img src="images/mcgcnn-arch.png" alt="mcgcnn architecture schematic" width="800">
 
+---
+## How to genearte the dual graph (crystal graph + corresponding magnetic subgraph)?
+
+We have to run the following command:
+
+```bash
+python preprocess.py data/sample --target tot_mom_mub --workers 8
+```
+
+---
+
 ## License
 
 This project is licensed under the **MIT License**.
