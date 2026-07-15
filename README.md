@@ -1,7 +1,14 @@
 # mCGCNN
 
-mCGCNN is a dual-stream crystal graph convolutional neural network for the efficient prediction of magnetic properties of crystalline materials. It augments the full structural graph with a dedicated magnetic subgraph. The magnetic stream performs angle-aware message passing over magnetic centers using metal-ligand-metal exchange-path descriptors motivated by Goodenough-Kanamori-Anderson physics, while layer-wise cross-coupling transfers structural and ligand-field information from the full crystal graph. A separate magnetic-sublattice pooling operation prevents the magnetic interaction from being diluted by nonmagnetic atoms. The incorporation of exchange geometry directly into graph architectures provides a physically grounded route to predictive models of magnetic materials.
+**mCGCNN** is a dual-stream crystal graph convolutional neural network for the efficient prediction of magnetic properties of crystalline materials.
 
+Its main features include:
+
+- A **dual-stream architecture** that augments the full crystal graph with a dedicated magnetic subgraph.
+- **Angle-aware message passing** on the magnetic subgraph using metal–ligand–metal exchange-path descriptors motivated by the Goodenough–Kanamori–Anderson (GKA) rules.
+- **Layer-wise cross-coupling** that transfers structural and ligand-field information from the full crystal graph to the magnetic stream.
+- A **magnetic-sublattice pooling** operation that prevents magnetic information from being diluted by nonmagnetic atoms.
+- A **physics-informed graph representation** that directly incorporates exchange geometry into graph neural networks for predictive modeling of magnetic materials.
 
 ## Dual graph representation in the mCGCNN architecture
 <img src="images/mcgcnn-graph.png" alt="Dual graph schematic" width="800">
