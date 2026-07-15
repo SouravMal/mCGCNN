@@ -35,6 +35,20 @@ where
 * `magnetic_atom_init.json` contains the magnetic elemental feature vectors.
 * `*.cif` files contain the crystal structures.  
 
+The first column of `dataset.csv` must contain the material IDs, which **must exactly match** the corresponding CIF filenames (without the `.cif` extension).
+
+For example,
+
+| **material_id** | **tot_mom_mub** |
+| :--- | :--- |
+| mp-100 | 5.82 |
+| mp-101 | 1.37 |
+| mp-102 | 0.00 |
+
+where **tot_mom_mub** denotes the DFT total magnetic moment per unit cell in $\mu_B$.
+
+
+
 
 
 ## How to genearte the dual graph (crystal graph + corresponding magnetic subgraph)?
