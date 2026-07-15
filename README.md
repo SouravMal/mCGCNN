@@ -47,8 +47,19 @@ For example,
 
 where **tot_mom_mub** denotes the DFT total magnetic moment per unit cell in $\mu_B$.
 
+### Generate the Graphs
 
-
+Run
+```bash
+python preprocess.py my_dataset --target tot_mom_mub 
+```
+By default, the generated graph files are written to
+my_dataset/
+├── processed_graphs/
+│   ├── mp-100.pt
+│   ├── mp-101.pt
+│   ├── mp-102.pt
+│   └── ...
 
 
 ## How to genearte the dual graph (crystal graph + corresponding magnetic subgraph)?
