@@ -126,9 +126,22 @@ python predict.py --data_dir sample_dataset/processed_graphs --model_path traini
 
 ## Predicting with the Pretrained mCGCNN model
 
+If you want to predict total magnetic moment per unit cell (units $\mu_B$) for your crystal structures, you can use our pretrained model.
 
+#### Prepare your data
+Place your `.cif` files, alongside a dummy `dataset.csv` (the target column can be filled with zeros, as it will be ignored during inference), and the required JSON feature files into a directory.
 
+Run the preprocessing script to generate the dual graph representations:
+```bash
+python preprocess.py my_unknown_dataset --target tot_mom_mub
+```
 
+#### Run Inference
+Use the `inference.py` script to load the pretrained model and generate predictions for your entire folder of materials:
+```bash
+python inference.py --data_dir my_unknown_dataset/processed_graphs --model_path pretrained_models/mcgcnn_pretrained_mp.pt
+```
+The script will generate a new directory named `./inference_results/` containing `pretrained_predictions.csv` with your final predicted magnetic moments.
 
 
 ## License
