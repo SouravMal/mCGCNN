@@ -76,7 +76,7 @@ Each .pt file stores the crystal graph, magnetic subgraph, magnetic-to-structura
 By default, `preprocess.py` uses all available CPU cores. To specify the number of worker processes manually, run the follwing.
 
 ```bash
-python preprocess.py my_dataset --target tot_mom_mub --workers 8
+python preprocess.py sample_dataset --target tot_mom_mub --workers 8
 ```
 
 
