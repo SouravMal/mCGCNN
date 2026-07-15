@@ -75,7 +75,7 @@ my_dataset/
 By default, `preprocess.py` uses all available CPU cores. To specify the number of worker processes manually, run the follwing.
 
 ```bash
-python preprocess.py data/sample --target tot_mom_mub --workers 8
+python preprocess.py my_dataset --target tot_mom_mub --workers 8
 ```
 
 
