@@ -69,11 +69,11 @@ sample_dataset/
 │   ├── mp-102.pt
 │   └── ...
 ```
-Each .pt file stores the crystal graph, magnetic subgraph, magnetic-to-structural index mapping, target property, and material ID.
+Each generated `.pt` file stores the crystal graph, magnetic subgraph, magnetic-to-structural index mapping, target property, and material ID.
 
 ### Using Multiple CPU Cores
 
-By default, `preprocess.py` uses all available CPU cores. To specify the number of worker processes manually, run the follwing.
+By default, `preprocess.py` uses all available CPU cores. To specify the number of worker processes manually, run:
 
 ```bash
 python preprocess.py sample_dataset --target tot_mom_mub --workers 8
